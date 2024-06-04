@@ -26,4 +26,12 @@ int main ()
         if(baris == "q") break;
         // menulis dan memasukkan nilai dari 'baris' ke dalam file
         outfile << baris << endl;
+
+        outfile.close();// selesai dalam menulis sekarang tutup filenya
+        ifstream infile; // membuka file dalam mode membaca
+        // menunjuk ke sebuah file
+        infile.open(NamaFile + ".txt", ios::out);
+
+        cout << endl << ">= Membuka dan membaca file " << endl;
+
     }
