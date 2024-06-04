@@ -7,5 +7,5 @@ int main() {
     string baris;
 
     ofstream outfile; //membuka file dlm mode menulis
-    
+    outfile.open("contohfile.txt");//menunjuk kesebuah nama file
 }
