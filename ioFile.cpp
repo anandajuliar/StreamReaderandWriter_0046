@@ -21,7 +21,7 @@ int main() {
 		//menulis dan memasukkan niai dari 'baris' ke dalam file
 		outfile << baris << endl;
 	}
-      // selesai dalam menulis sekarang tutup file nya
+    // selesai dalam menulis sekarang tutup file nya
 	outfile.close();
 
 	ifstream infile; //Membuka file dalam mode baca
@@ -29,5 +29,18 @@ int main() {
 
 	cout << endl << ">= Membuka dan membaca file " << endl;
 
+    //jika file ada maka
+	if (infile.is_open())
+	{
+		// melakukan perulangan setiap baris
+		while (getline(infile, baris))
+		{
+			//dan tampilkan disini
+			cout << baris << '\n';
+		}
+		//tutp file tersebut setelah selesai
+		infile.close();
+	}
 
+	
 }
